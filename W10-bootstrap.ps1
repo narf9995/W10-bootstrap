@@ -57,7 +57,7 @@ cd filesystem::c:\SystemDownload\Temp | Invoke-Expression; ./$powershell
 dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
 
 # Download WSL2 Update
-cd $env:temp | Invoke-Expression; Invoke-RestMethod -Method Get -URI https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi -OutFile wsl_update_x64.msi | Invoke-Expression; ./wsl_update_x64.msi
+Invoke-Expression; Invoke-RestMethod -Method Get -URI https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi -OutFile C:\SystemDownload\Temp\wsl_update_x64.msi
 
 # Restart Computer to Finalize WSL Install
 Restart-Computer
