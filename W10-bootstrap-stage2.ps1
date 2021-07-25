@@ -14,11 +14,14 @@ wsl --set-default-version 2
 
 ## 2 - Install Powershell Modules
 
+# Download & Install Custom Powershell Module
+
+
 # Pscx - PowerShell Community Extensions
-Install-Module Pscx -Scope CurrentUser
+Install-Module Pscx -Scope CurrentUser -Force
 
 # DeviceManagement Powershell Module
 Install-Module -Name DeviceManagement -Scope CurrentUser -Force
 
 # AnyBox Module
-Install-Module -Name 'AnyBox'
+Install-Module -Name 'AnyBox' -Force

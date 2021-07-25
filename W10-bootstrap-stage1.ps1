@@ -51,9 +51,6 @@ Remove-Item $pathZip -Force
 $powershell = Get-ChildItem -Path C:\SystemDownload\Temp -Include *win-x64.msi -File -Recurse -ErrorAction SilentlyContinue
 cd filesystem::c:\SystemDownload\Temp | Invoke-Expression; ./$powershell
 
-# Download & Install Custom Powershell Module
-
-
 # Enable Virtual Machine Platform Feature
 dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
 
