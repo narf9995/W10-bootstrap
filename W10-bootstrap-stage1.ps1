@@ -15,7 +15,7 @@ If(!(test-path $path))
 # Forked from Splaxi/download-latest-release.ps1 (https://gist.github.com/Splaxi/fe168eaa91eb8fb8d62eba21736dc88a)
 $repo = "PowerShell/PowerShell"
 $filenamePattern = "*win-x64.msi"
-$pathExtract = "C:\SystemDownload\Temp"
+$pathExtract = "C:\S ystemDownload\Temp"
 $innerDirectory = $false
 $preRelease = $false
 
@@ -52,6 +52,7 @@ $powershell = Get-ChildItem -Path C:\SystemDownload\Temp -Include *win-x64.msi -
 cd filesystem::c:\SystemDownload\Temp | Invoke-Expression; ./$powershell
 
 # Download & Install Custom Powershell Module
+
 
 # Enable Virtual Machine Platform Feature
 dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
