@@ -1,21 +1,8 @@
-### Windows 10 Config Bootsrap Script
-### By NAAJ - Dev. started 7/22/2021
-
-# Check Powershell Running with Admin Privilleges; Escalate If Not
-if (!([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole] "Administrator")) { Start-Process powershell.exe "-NoProfile -ExecutionPolicy Bypass -File `"$PSCommandPath`"" -Verb RunAs; exit }
-
-# Check if SystemDownload Exists; Create if Absent
-$path = "C:\SystemDownload"
-If(!(test-path $path))
-{
-      New-Item -ItemType Directory -Force -Path $path
-}
-
 # Download latest PowerShell-7 release from github
 # Forked from Splaxi/download-latest-release.ps1 (https://gist.github.com/Splaxi/fe168eaa91eb8fb8d62eba21736dc88a)
 $repo = "PowerShell/PowerShell"
 $filenamePattern = "*win-x64.msi"
-$pathExtract = "C:\S ystemDownload\Temp"
+$pathExtract = "C:\SystemDownload\Temp"
 $innerDirectory = $false
 $preRelease = $false
 
